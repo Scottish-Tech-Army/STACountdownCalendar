@@ -1,1 +1,50 @@
+.app {
+  padding: 100px 0 20px;
+}
 
+.col {
+  margin: 0;
+  padding: 0;
+}
+
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 100%;
+}
+
+.btn {
+  background-color: #3278A7;
+  border-radius: 0;
+  padding: 0;
+}
+
+.btn:hover {
+  background-color: #153D68;
+  border-color: #153D68;
+}
+
+.btn-primary {
+  border-color: #3278A7;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active {
+  background-color: #153D68;
+  border-color: #153D68;
+}
+
+.btn-primary:focus {
+    background-color: #153D68;
+    border-color: #153D68;
+    box-shadow: none;
+}
+
+@media screen and (max-width: 1039px) {
+  .app {
+    padding: 100px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .app {
+    padding: 70px 0 0;
+  }
+}

@@ -1,0 +1,57 @@
+.modal {
+  z-index: 6000;
+}
+
+.modal img {
+  width: 90vw;
+}
+
+.modal-button {
+  padding: 10px;
+}
+
+.modal-backdrop {
+  z-index: 6000;
+}
+.modal-backdrop.show {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 1024px) {
+  .modal img {
+    width: 75vw;
+  }
+  .modal h1 {
+    font-size: 1.5rem;
+  }
+  .modal h2 {
+    font-size: 1.25rem;
+  }
+  .modal p {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal img {
+    width: 60vw;
+  }
+  .modal p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .modal img {
+    width: 85vw;
+  }
+  .modal h1 {
+    font-size: 1.25rem;
+  }
+  .modal h2 {
+    font-size: 1rem;
+  }
+  .modal p {
+    font-size: 0.75rem;
+  }
+}
