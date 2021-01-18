@@ -2,8 +2,13 @@
   z-index: 6000;
 }
 
+.modal-dialog {
+  max-width: 95vw;
+  width: 50vw;
+}
+
 .modal img {
-  width: 90vw;
+  width: 47.5vw;
 }
 
 .modal-button {
@@ -18,8 +23,11 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .modal-dialog {
+    width: 90vw;
+  }
   .modal img {
-    width: 75vw;
+    width: 87vw;
   }
   .modal h1 {
     font-size: 1.5rem;
@@ -28,22 +36,22 @@
     font-size: 1.25rem;
   }
   .modal p {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 
 @media screen and (max-width: 768px) {
   .modal img {
-    width: 60vw;
-  }
-  .modal p {
-    font-size: 1rem;
+    width: 85vw;
   }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 600px) {
+  .modal-dialog {
+    width: 95vw;
+  }
   .modal img {
-    width: 85vw;
+
   }
   .modal h1 {
     font-size: 1.25rem;
