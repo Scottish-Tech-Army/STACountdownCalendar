@@ -3,10 +3,13 @@
   top: 0;
   width: 100vw;
   background-color: #FFFFFF;
+  z-index: 5000;
+}
+
+.header-content {
   display: flex;
   flex-direction: row;
   align-items: center;
-  z-index: 5000;
 }
 
 .header-container h1 {

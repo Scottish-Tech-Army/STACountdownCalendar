@@ -1,5 +1,5 @@
 .app {
-  padding: 100px 0 20px;
+  padding: 9rem 0 20px;
 }
 
 .col {
@@ -37,14 +37,8 @@
     box-shadow: none;
 }
 
-@media screen and (max-width: 1039px) {
-  .app {
-    padding: 100px 0;
-  }
-}
-
 @media screen and (max-width: 600px) {
   .app {
-    padding: 70px 0 0;
+    padding: 7rem 0 0;
   }
 }
