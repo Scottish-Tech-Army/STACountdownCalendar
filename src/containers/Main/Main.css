@@ -1,0 +1,31 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+
+.promotion-window-button {
+  height: 14vw;
+  width: 14vw;
+  border: 1px solid #FFFFFF;
+}
+
+@media screen and (max-width: 1444px) {
+  .promotion-window-button {
+    height: 13.95vw;
+    width: 13.95vw;
+  }
+}
+
+@media screen and (max-width: 1275px) {
+  .promotion-window-button {
+    height: 13.5vw !important;
+    width: 13.5vw !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .promotion-window-button {
+    height: 90vw !important;
+    width: 90vw !important;
+  }
+}

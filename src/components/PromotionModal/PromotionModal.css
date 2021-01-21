@@ -1,0 +1,65 @@
+.modal {
+  z-index: 6000;
+}
+
+.modal-dialog {
+  max-width: 95vw;
+  width: 50vw;
+}
+
+.modal img {
+  width: 47.5vw;
+}
+
+.modal-button {
+  padding: 10px;
+}
+
+.modal-backdrop {
+  z-index: 6000;
+}
+.modal-backdrop.show {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 1024px) {
+  .modal-dialog {
+    width: 90vw;
+  }
+  .modal img {
+    width: 87vw;
+  }
+  .modal h1 {
+    font-size: 1.5rem;
+  }
+  .modal h2 {
+    font-size: 1.25rem;
+  }
+  .modal p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal img {
+    width: 85vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .modal-dialog {
+    width: 95vw;
+  }
+  .modal img {
+
+  }
+  .modal h1 {
+    font-size: 1.25rem;
+  }
+  .modal h2 {
+    font-size: 1rem;
+  }
+  .modal p {
+    font-size: 0.75rem;
+  }
+}

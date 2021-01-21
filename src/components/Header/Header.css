@@ -1,0 +1,41 @@
+.header-container {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background-color: #FFFFFF;
+  z-index: 5000;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header-container h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #153D68;
+  margin: 0;
+}
+
+.header-container img {
+  height: 100px;
+  margin: 10px 15px 0;
+  background-color: #FFFFFF;
+}
+
+@media screen and (max-width: 780px) {
+  .header-container h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header-container img {
+    height: 60px;
+  }
+  .header-container h1 {
+    font-size: 1.25rem;
+  }
+}
