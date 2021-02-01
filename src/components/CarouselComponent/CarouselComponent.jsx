@@ -14,7 +14,7 @@ return <Carousel>
             {item["media-type"] === "image" ?    //if media-type is image then...
                 <>
              <div className="img-wrapper">
-        <img src={item.src} alt="A Carousel." />
+        <img src={item["media-url"]} alt="A Carousel." />
         <div className="img-overlay"></div>
    
         </div>
@@ -23,7 +23,7 @@ return <Carousel>
             
         : <>                                   
         <div className ="vid-wrapper">  
-            <ReactPlayer url = {item.src} height="100%" width="100%" />
+            <ReactPlayer url = {item["media-url"]} height="100%" width="100%" />
             </div>
             </>  }
         </Carousel.Item>
