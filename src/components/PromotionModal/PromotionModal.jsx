@@ -3,8 +3,10 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 
 function PromotionModal({ show, handleClose }) {
+
   return (
     <Modal
+      animation={false}
       show={show}
       onHide={handleClose}
       size="lg"
@@ -14,11 +16,11 @@ function PromotionModal({ show, handleClose }) {
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
           <h1>Local Retailer</h1>
-          <h2>Monday, 01 February 2020</h2>
+          <h2>Date</h2>
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <img src="/assets/shutterstock_709738510.jpg" />
+        <img src="/assets/shutterstock_709738510.jpg" alt="placeholder"/>
         <hr />
         <h2>Promotion Description</h2>
         <p>

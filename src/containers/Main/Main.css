@@ -3,10 +3,27 @@
   justify-content: center;
 }
 
-.promotion-window-button {
+.promotion-window-button,
+.promotion-window-button-current-date {
   height: 14vw;
   width: 14vw;
   border: 1px solid #FFFFFF;
+  border-radius: 0;
+  padding: 0;
+}
+
+.promotion-window-button {
+  background-color: #3278A7;
+}
+
+.promotion-window-button-current-date {
+  background-color: #153D68;
+}
+
+.promotion-window-button:hover,
+.promotion-window-button-current-date:hover {
+  background-color: #153D68;
+  border-color: #153D68;
 }
 
 @media screen and (max-width: 1444px) {

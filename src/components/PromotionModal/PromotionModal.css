@@ -12,7 +12,14 @@
 }
 
 .modal-button {
+  background-color: #3278A7;
+  border-radius: 0;
   padding: 10px;
+}
+
+.modal-button:hover {
+  background-color: #153D68;
+  border-color: #153D68;
 }
 
 .modal-backdrop {
