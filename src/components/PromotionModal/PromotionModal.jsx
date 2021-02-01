@@ -5,6 +5,8 @@ import CarouselComponent from '../CarouselComponent/CarouselComponent.jsx'
 
 function PromotionModal({ show, handleClose }) {
 
+  const carouselContent = [{"media-type": "image", "media-url": "public/assets/shutterstock_709738510.jpg"}]
+
 
  
 
