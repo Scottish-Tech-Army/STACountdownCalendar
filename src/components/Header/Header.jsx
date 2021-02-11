@@ -2,7 +2,7 @@ import "./Header.css";
 
 function Header() {
   return (
-    <div className="header-container">
+    <div className="header-contents">
       <div>
         <img src="assets/DunbarLogo.png" alt="Dunbar town logo" />
       </div>

@@ -1,16 +1,16 @@
-.header-container {
+.header-contents {
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 65vw;
   background-color: #FFFFFF;
   z-index: 5000;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   height: 15vh;
 }
 
-.header-container img {
-  margin: 1rem auto 0;
-  height: 15vh;
+.header-contents img {
+  margin: 1rem 1rem 1rem 2rem;
+  height: 12.5vh;
 }

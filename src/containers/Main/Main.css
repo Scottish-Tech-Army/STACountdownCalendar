@@ -2,11 +2,10 @@
   display: flex;
   justify-content: center;
   height: 70vh;
-  width: 60vw;
+  width: 65vw;
   margin: 0 auto;
   overflow-y: scroll;
   background-size: cover;
-  /* padding-top: 10px; */
 }
 
 .promotion-window-container {
@@ -38,17 +37,12 @@
 
 .promotion-window-button-current-date {
   /* background-color: #ffffff; */
-  background-color: #dedcaf;
+  background-color: rgb(222, 220, 175, 0.75);
 }
 
 .promotion-window-button:hover {
-  background-color: #3278A7;
-  border-color: #3278A7;
-}
-
-.promotion-window-button-current-date img:hover {
-    webkit-filter: blur(4px); /* Chrome, Safari, Opera */
-    filter: blur(4px);
+  background-color: rgb(50, 120, 167, 0.75);
+  border-color: #3278a7;
 }
 
 @media screen and (max-width: 1444px) {

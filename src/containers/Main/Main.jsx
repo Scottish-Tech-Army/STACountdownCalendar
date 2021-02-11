@@ -1,9 +1,5 @@
 import { useState } from "react";
 import "./Main.css";
-import moment from "moment";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Button from "react-bootstrap/Button";
 import PromotionWindow from "../../components/PromotionWindow/PromotionWindow";
 import PromotionModal from "../../components/PromotionModal/PromotionModal";
 import config from "../../config.json";

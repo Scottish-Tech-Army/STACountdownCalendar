@@ -1,6 +1,5 @@
 import "./PromotionWindow.css";
 import moment from "moment";
-import Col from "react-bootstrap/Col";
 
 function PromotionWindow({ promotionWindowDate, currentDate }) {
   const promotionWindowImage = () => {
