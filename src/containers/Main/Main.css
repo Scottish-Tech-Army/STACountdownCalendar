@@ -13,7 +13,7 @@
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 0 auto;
+  margin: 0.75rem auto;
 }
 
 /* .promotion-window-container .row {
