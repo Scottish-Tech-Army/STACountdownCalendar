@@ -10,6 +10,18 @@
   height: 15vh;
 }
 
+.header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 1.5rem 1.75rem 1.5rem 1.5rem;
+  text-align: left;
+  font-size: 0.75rem;
+  color: #3278a7;
+  border: 1px solid #3278a7;
+  padding: 1rem;
+}
+
 .header-contents img {
   margin: 1rem 1rem 1rem 2rem;
   height: 12.5vh;

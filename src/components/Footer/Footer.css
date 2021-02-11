@@ -15,5 +15,6 @@
 
 .footer-contents a {
   color: #3278a7;
-  margin: 1rem;
+  font-size: 1rem;
+  margin-top: 1rem;
 }
