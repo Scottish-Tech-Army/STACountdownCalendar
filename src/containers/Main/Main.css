@@ -6,6 +6,7 @@
   margin: 0 auto;
   overflow-y: scroll;
   background-size: cover;
+  background-position: center;
 }
 
 .promotion-window-container {
@@ -16,27 +17,7 @@
   margin: 0.75rem auto;
 }
 
-/* .promotion-window-container .row {
-  margin: 0;
-} */
-
-.promotion-window-button,
 .promotion-window-button-current-date {
-  /* height: 15vw;
-  width: 15vw; */
-  /* border: 1px solid #FFFFFF; */
-  border: none;
-  border-radius: 0;
-  padding: 0;
-}
-
-.promotion-window-button {
-  /* background-color: #3278A7; */
-  /* background-color: none; */
-}
-
-.promotion-window-button-current-date {
-  /* background-color: #ffffff; */
   background-color: rgb(222, 220, 175, 0.75);
 }
 
@@ -61,8 +42,21 @@
 }
 
 @media screen and (max-width: 600px) {
-  .promotion-window-button {
+  /* .promotion-window-button {
     height: 90vw !important;
     width: 90vw !important;
+  } */
+}
+
+@media screen and (max-width: 600px) {
+  .main-container {
+    /* display: flex;
+    justify-content: center; */
+    /* height: 100%; */
+    width: 90vw;
+    /* margin: 0 auto; */
+    /* overflow-y: scroll; */
+    /* background-size: cover;
+    background-position: center; */
   }
 }

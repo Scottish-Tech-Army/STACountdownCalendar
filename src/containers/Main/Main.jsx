@@ -45,7 +45,7 @@ function Main() {
       className="main-container"
       style={{
         backgroundImage: `url(${
-          process.env.PUBLIC_URL + "/assets/SOLE-calendar-background.jpg"
+          process.env.PUBLIC_URL + "/assets/Dunbar-Town-Map.png"
         })`,
         backgroundRepeat: 'no-repeat',
       }}

@@ -2,16 +2,19 @@
   position: relative;
   text-align: center;
   color: white;
+  display: flex;
+  /* margin: 0 auto; */
 }
 
 .bottom-right {
   position: absolute;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  font-size: 1.5rem;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 2rem;
   font-weight: bold;
-  background-color: #153D68;
-  padding: 0 0.25rem;
+  /* background-color: #153D68; */
+  background-color: #3278a7;
+  padding: 0 0.5rem;
 }
 
 .promotion-window-col img {
@@ -22,7 +25,14 @@
 
 @media screen and (max-width: 600px) {
   .promotion-window-col img {
-    height: 80vw;
-    width: 80vw;
+    height: 85vw;
+    width: 85vw;
+    margin: 1rem auto;
+  }
+  .bottom-right {
+    right: 0.5rem;
+    bottom: 1rem;
+    font-size: 3rem;
+    padding: 0.25rem 1rem;
   }
 }

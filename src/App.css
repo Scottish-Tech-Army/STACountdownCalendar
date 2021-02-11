@@ -2,19 +2,9 @@
   display: flex;
   justify-content: center;
   padding: 15vh 0;
-  /* width: 70vw; */
   height: 100vh;
   margin: 0 auto;
 }
-
-/* .col {
-  margin: 0;
-  padding: 0;
-} */
-
-/* .container, .container-lg, .container-md, .container-sm, .container-xl {
-    max-width: 100%;
-} */
 
 .btn-primary {
   border-color: #3278A7;
@@ -30,5 +20,11 @@
 @media screen and (max-width: 600px) {
   .app {
     /* padding: 7rem 0 0; */
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .app {
+    /* padding: 50rem 0 0; */
   }
 }
