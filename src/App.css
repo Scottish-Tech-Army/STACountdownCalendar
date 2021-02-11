@@ -1,15 +1,20 @@
 .app {
-  padding: 9rem 0 20px;
+  display: flex;
+  justify-content: center;
+  padding: 20vh 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
 }
 
-.col {
+/* .col {
   margin: 0;
   padding: 0;
-}
+} */
 
-.container, .container-lg, .container-md, .container-sm, .container-xl {
+/* .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width: 100%;
-}
+} */
 
 .btn-primary {
   border-color: #3278A7;
@@ -17,13 +22,13 @@
 
 .btn-primary:not(:disabled):not(.disabled):active,
 .btn-primary:focus {
-  background-color: #153D68;
-  border-color: #153D68;
+  background-color: #f2f2f2;
+  border-color: #f2f2f2;
   box-shadow: none;
 }
 
 @media screen and (max-width: 600px) {
   .app {
-    padding: 7rem 0 0;
+    /* padding: 7rem 0 0; */
   }
 }

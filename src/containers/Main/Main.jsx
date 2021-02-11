@@ -15,7 +15,7 @@ function Main() {
   // const currentDate = moment().format("YYYYMMDD");
 
   // For Development
-  const currentDate = "20210210";
+  const currentDate = "20210310";
 
   const [show, setShow] = useState(false);
   // const [openWindow, setOpenWindow] = useState(null);
@@ -23,28 +23,40 @@ function Main() {
   const handleClose = () => setShow(false);
   const handleShow = () => {
     setShow(true);
-  }
+  };
 
   const promotionWindows = allDays.map((promotionWindow, index) => {
     return (
-      <Button
+      <div
         key={index}
         onClick={handleShow}
-        className={(promotionWindow.Date !== currentDate) ? "promotion-window-button" : "promotion-window-button-current-date"}
+        className={
+          promotionWindow.Date !== currentDate
+            ? "promotion-window-button"
+            : "promotion-window-button promotion-window-button-current-date"
+        }
       >
         <PromotionWindow
           currentDate={currentDate}
-          promotionWindowDate={moment(promotionWindow.Date)}
+          promotionWindowDate={promotionWindow.Date}
         />
-      </Button>
+      </div>
     );
   });
 
   return (
-    <Container fluid className="main-container">
-      <Row className="promotion-window-container">{promotionWindows}</Row>
+    <div
+      className="main-container"
+      style={{
+        backgroundImage: `url(${
+          process.env.PUBLIC_URL + "/assets/SOLE-calendar-background.jpg"
+        })`,
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+      <div className="promotion-window-container">{promotionWindows}</div>
       <PromotionModal show={show} handleClose={handleClose} />
-    </Container>
+    </div>
   );
 }
 

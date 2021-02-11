@@ -3,11 +3,9 @@ import "./Header.css";
 function Header() {
   return (
     <div className="header-container">
-      <div className="header-content">
-        <img src="assets/Dunbar.png" alt="logo" />
-        <h1>Dunbar Promotion Calendar</h1>
+      <div>
+        <img src="assets/DunbarLogo.png" alt="Dunbar town logo" />
       </div>
-      <hr />
     </div>
   );
 }

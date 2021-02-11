@@ -1,51 +1,28 @@
-.promotion-window-container {
-  margin: 0;
+.promotion-window-col {
+  position: relative;
+  text-align: center;
+  color: white;
 }
 
-.promotion-window {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-}
-
-.promotion-window-date {
-  font-size: 3rem;
+.bottom-right {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
-  margin: 10px auto;
+  background-color: #153D68;
+  padding: 0 0.5rem;
 }
 
-.promotion-window-day-text,
-.promotion-window-date-text {
-  font-size: 16px;
-}
-
-@media screen and (max-width: 1275px) {
-
-  .promotion-window-date {
-    font-size: 1.5rem;
-  }
-
-  .promotion-window-day-text,
-  .promotion-window-date-text {
-    font-size: 0.75rem;
-  }
+.promotion-window-col img {
+  height: 17.5vh;
+  width: 17.5vh;
+  margin: 1.5rem;
 }
 
 @media screen and (max-width: 600px) {
-
-  .promotion-window-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 20px;
+  .promotion-window-col img {
+    height: 80vw;
+    width: 80vw;
   }
-
-  .promotion-window-date {
-    font-weight: bold;
-    margin: 10px auto;
-  }
-
 }

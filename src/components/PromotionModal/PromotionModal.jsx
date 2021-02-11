@@ -6,10 +6,9 @@ function PromotionModal({ show, handleClose }) {
 
   return (
     <Modal
-      animation={false}
       show={show}
       onHide={handleClose}
-      size="lg"
+      // size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
