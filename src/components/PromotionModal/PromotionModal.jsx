@@ -5,13 +5,12 @@ import CarouselComponent from '../CarouselComponent/CarouselComponent.jsx'
 
 function PromotionModal({ show, handleClose }) {
 
+
   const carouselContent = [{"media-type": "image", "media-url": "public/assets/shutterstock_709738510.jpg"}]
-
-
- 
 
   return (
     <Modal
+      animation={false}
       show={show}
       onHide={handleClose}
       size="lg"
@@ -21,11 +20,13 @@ function PromotionModal({ show, handleClose }) {
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
           <h1>Local Retailer</h1>
-          <h2>Monday, 01 February 2020</h2>
+          <h2>Date</h2>
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
+
         <CarouselComponent content ={carouselContent}/>
+
         <hr />
         <h2>Promotion Description</h2>
         <p>
