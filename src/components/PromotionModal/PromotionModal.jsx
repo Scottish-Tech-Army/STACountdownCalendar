@@ -1,8 +1,12 @@
 import "./PromotionModal.css";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
+import CarouselComponent from '../CarouselComponent/CarouselComponent.jsx'
 
 function PromotionModal({ show, handleClose }) {
+
+
+  const carouselContent = [{"media-type": "image", "media-url": "public/assets/shutterstock_709738510.jpg"}]
 
   return (
     <Modal
@@ -20,7 +24,9 @@ function PromotionModal({ show, handleClose }) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <img src="/assets/shutterstock_709738510.jpg" alt="placeholder"/>
+
+        <CarouselComponent content ={carouselContent}/>
+
         <hr />
         <h2>Promotion Description</h2>
         <p>
