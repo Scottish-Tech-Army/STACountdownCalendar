@@ -22,7 +22,7 @@
 }
 
 .promotion-window-button:hover {
-  background-color: rgb(50, 120, 167, 0.75);
+  background-color: rgb(256, 256, 256, 0.5);
   border-color: #3278a7;
   cursor: pointer;
 }

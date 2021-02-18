@@ -7,35 +7,14 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 13vh;
-  margin-bottom: 2vh;
-  color: #3278a7;
-  font-size: 1.25rem;
-  /* border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px; */
-}
-
-.footer-contents a {
+  height: 15vh;
+  margin-bottom: 0;
   color: #3278a7;
   font-size: 1rem;
-  margin-top: 1rem;
+  padding: 1rem;
 }
 
 @media screen and (max-width: 600px) {
   .footer-contents {
-    /* position: fixed;
-    bottom: 0; */
-    width: 90vw;
-    /* background-color: #FFFFFF;
-    z-index: 5000;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 13vh;
-    margin-bottom: 2vh;
-    color: #3278a7;
-    font-size: 1.25rem; */
-    /* border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px; */
   }
 }

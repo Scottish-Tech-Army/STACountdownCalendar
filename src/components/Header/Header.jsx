@@ -3,9 +3,7 @@ import "./Header.css";
 function Header() {
   return (
     <div className="header-contents">
-
-        <img src="assets/DunbarLogo.png" alt="Dunbar town logo" />
-
+      <img src="assets/SOLE-DUNBAR-Logo.svg" alt="Sole & Dunbar Town Logo" />
     </div>
   );
 }

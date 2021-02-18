@@ -3,14 +3,7 @@ body {
   font-family: -apple-system, "Granville-Regular";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: #eaf2fb;
-  background-color: #95bee9; */
   background-color: #d3d9de;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 @font-face {

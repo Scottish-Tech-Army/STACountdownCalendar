@@ -2,10 +2,11 @@ import { useState } from "react";
 import "./Main.css";
 import PromotionWindow from "../../components/PromotionWindow/PromotionWindow";
 import PromotionModal from "../../components/PromotionModal/PromotionModal";
-import config from "../../config.json";
 
-function Main() {
-  const allDays = config.days;
+function Main(
+  allDays,
+  setOpenWindow
+) {
 
   // For Production
   // const currentDate = moment().format("YYYYMMDD");
@@ -13,19 +14,28 @@ function Main() {
   // For Development
   const currentDate = "20210310";
 
-  const [show, setShow] = useState(false);
+
+  function handleClick(day) {
+    setOpenWindow(day);
+  }
+
+  const [showPromotionalModal, setShowPromotionalModal] = useState(false);
   // const [openWindow, setOpenWindow] = useState(null);
 
-  const handleClose = () => setShow(false);
+  const handleClose = () => setShowPromotionalModal(false);
   const handleShow = () => {
-    setShow(true);
+    setShowPromotionalModal(true);
+  };
+  const handleNotShow = () => {
+    setShowPromotionalModal(false);
   };
 
-  const promotionWindows = allDays.map((promotionWindow, index) => {
+  const promotionWindows = allDays.allDays.map((promotionWindow, index) => {
+
     return (
       <div
         key={index}
-        onClick={handleShow}
+        onClick={promotionWindow.Date <= currentDate ? handleShow : handleNotShow}
         className={
           promotionWindow.Date !== currentDate
             ? "promotion-window-button"
@@ -45,13 +55,13 @@ function Main() {
       className="main-container"
       style={{
         backgroundImage: `url(${
-          process.env.PUBLIC_URL + "/assets/Dunbar-Town-Map.png"
+          process.env.PUBLIC_URL + "/assets/SOLE-calendar-background.jpg"
         })`,
-        backgroundRepeat: 'no-repeat',
+        backgroundRepeat: "no-repeat",
       }}
     >
       <div className="promotion-window-container">{promotionWindows}</div>
-      <PromotionModal show={show} handleClose={handleClose} />
+      <PromotionModal show={showPromotionalModal} handleClose={handleClose} />
     </div>
   );
 }

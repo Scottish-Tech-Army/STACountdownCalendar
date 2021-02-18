@@ -3,7 +3,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <div className="footer-contents">
-        <a href="#">www.sole.scot</a>
+        2021&copy; Scottish Tech Army
     </div>
   );
 }

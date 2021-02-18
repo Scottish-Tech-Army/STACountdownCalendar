@@ -3,17 +3,24 @@
 }
 
 .modal-dialog {
-  max-width: 95vw;
-  width: 42vw;
+  max-width: 80vw;
+}
+
+.modal-content {
+  border-radius: 0;
+  border: none;
 }
 
 .modal img {
-  width: 40vw;
+  width: 35vw;
+  /* padding: 2vh; */
+  background-color: #ffffff;
 }
 
 .modal-button {
-  background-color: #3278A7;
-  border-radius: 0;
+  background-color: #153D68;
+  color: #ffffff;
+  border-radius: 5px;
   padding: 10px;
 }
 
@@ -29,44 +36,59 @@
   opacity: 0.7;
 }
 
+.promotion-modal-header,
+.modal-footer {
+  background-color: #ffffff;
+  color: #153D68;
+  border-radius: 0;
+  border-top: 0;
+  border-bottom: 0;
+  border-right: 0;
+  border-left: 0;
+}
+
+.promotional-window-body {
+  padding: 2vh;
+  margin: 3vh auto;
+  color: #153D68;
+  background-color: rgb(255, 255, 255);
+  max-width: 75vw;
+}
+
+.promotional-window-detail {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
+
+.promotional-window-coupon-code {
+  display: flex;
+  flex-direction: row;
+  color: #3278a7;
+}
+
+.promotional-window-url {
+  color: #3278a7;
+}
+
+.promotional-window-url:hover {
+  text-decoration: none;
+  color: #153D68;
+}
+
+.sole-supplier-link {
+  margin: 0 0.25rem;
+  color: #3278a7;
+}
+
+.copy-paste {
+  margin: 0 0.25rem;
+  color: #153D68;
+}
+
+.copy-paste:hover {
+  color: #3278a7;
+}
+
 @media screen and (max-width: 1024px) {
-  .modal-dialog {
-    width: 90vw;
-  }
-  .modal img {
-    width: 87vw;
-  }
-  .modal h1 {
-    font-size: 1.5rem;
-  }
-  .modal h2 {
-    font-size: 1.25rem;
-  }
-  .modal p {
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .modal img {
-    width: 85vw;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .modal-dialog {
-    width: 95vw;
-  }
-  .modal img {
-
-  }
-  .modal h1 {
-    font-size: 1.25rem;
-  }
-  .modal h2 {
-    font-size: 1rem;
-  }
-  .modal p {
-    font-size: 0.75rem;
-  }
 }
