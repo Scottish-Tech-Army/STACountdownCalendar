@@ -18,15 +18,15 @@
 }
 
 .modal-button {
-  background-color: #153D68;
+  background-color: #153d68;
   color: #ffffff;
   border-radius: 5px;
   padding: 10px;
 }
 
 .modal-button:hover {
-  background-color: #153D68;
-  border-color: #153D68;
+  background-color: #153d68;
+  border-color: #153d68;
 }
 
 .modal-backdrop {
@@ -39,7 +39,7 @@
 .promotion-modal-header,
 .modal-footer {
   background-color: #ffffff;
-  color: #153D68;
+  color: #153d68;
   border-radius: 0;
   border-top: 0;
   border-bottom: 0;
@@ -47,48 +47,91 @@
   border-left: 0;
 }
 
-.promotional-window-body {
+.promotional-modal-body {
   padding: 2vh;
   margin: 3vh auto;
-  color: #153D68;
+  color: #153d68;
   background-color: rgb(255, 255, 255);
   max-width: 75vw;
 }
 
-.promotional-window-detail {
+.promotional-modal-body h1 {
+  font-size: 3rem;
+}
+
+.promotional-modal-detail {
   display: flex;
   flex-direction: column;
   width: 50vw;
 }
 
-.promotional-window-coupon-code {
+.promotional-modal-coupon-code h3,
+.promotional-modal-url {
+  font-size: 18px;
+}
+
+.promotional-modal-coupon-code {
   display: flex;
   flex-direction: row;
   color: #3278a7;
 }
 
-.promotional-window-url {
+.promotional-modal-url {
   color: #3278a7;
+  margin-top: 2vh;
 }
 
-.promotional-window-url:hover {
+.promotional-modal-url:hover {
   text-decoration: none;
-  color: #153D68;
-}
-
-.sole-supplier-link {
-  margin: 0 0.25rem;
-  color: #3278a7;
+  color: #153d68;
 }
 
 .copy-paste {
-  margin: 0 0.25rem;
-  color: #153D68;
-}
-
-.copy-paste:hover {
+  margin: 0 0.5rem;
   color: #3278a7;
 }
 
+.copy-paste:hover {
+  color: #153d68;
+}
+
 @media screen and (max-width: 1024px) {
+  .promotional-modal-body .row {
+    flex-direction: column;
+  }
+  .modal img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .promotion-modal-header h3 {
+    font-size: 14px;
+  }
+  .promotional-modal-body {
+    margin: 2vh auto;
+    max-width: 90vw;
+  }
+  .promotional-modal-detail {
+    width: 100%;
+  }
+  .promotional-modal-body h1 {
+    font-size: 24px;
+    margin-top: 2vh;
+  }
+  .promotional-modal-coupon-code h3,
+  .promotional-modal-url {
+    font-size: 14px;
+  }
+  .promotional-modal-description,
+  .promotional-modal-terms,
+  .modal-button {
+    font-size: 12px;
+  }
+  .modal-body {
+    padding: 0;
+  }
+  .modal-dialog {
+    max-width: 100%;
+  }
 }

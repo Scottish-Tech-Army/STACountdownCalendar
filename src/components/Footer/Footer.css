@@ -14,7 +14,10 @@
   padding: 1rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 414px) {
   .footer-contents {
+    width: 90vw;
+    margin: 0 auto;
+    font-size: 0.75rem;
   }
 }

@@ -24,39 +24,32 @@ function PromotionModal({ show, handleClose }) {
           backgroundSize: "cover",
         }}
       >
-        <Container className="promotional-window-body">
+        <Container className="promotional-modal-body">
           <Row>
             <Col>
               <img src="/assets/AdrianosFishAndChips.png" alt="placeholder" />
             </Col>
-            <Col className="promotional-window-detail">
+            <Col className="promotional-modal-detail">
               <span>
                 <h1>10% Off @ Adrianos</h1>
               </span>
-              <span className="promotional-window-coupon-code">
-                <h3>Coupon Code: WEGOTSOLE2021</h3>
-                <FontAwesomeIcon icon={faCopy} className="copy-paste" />
+              <span className="promotional-modal-coupon-code">
+                <h3>
+                  Coupon Code: WEGOTSOLE2021
+                  <FontAwesomeIcon icon={faCopy} className="copy-paste" />
+                </h3>
               </span>
-              <span>
+              <span className="promotional-modal-description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
                 pellentesque tellus bibendum ipsum cursus, vel sodales ante
-                pretium. In efficitur consectetur congue. Vestibulum consectetur
-                ut dui ac vehicula. Integer quis augue vitae mi pulvinar
-                scelerisque at vel dui.
+                pretium.
               </span>
-              <br />
-              <span className="promotional-window-coupon-code">
-                <a className="promotional-window-url" href="#">
+              <h3>
+                <a className="promotional-modal-url" href="#">
                   Link to SOLE Scotland platform.{" "}
-                  <FontAwesomeIcon
-                    icon={faExternalLinkAlt}
-                    className="sole-supplier-link"
-                  />
                 </a>
-              </span>
-              <br />
-              <span>* Promotion ends on 15 March 2021.</span>
-              <span>** Terms and conditions may apply.</span>
+              </h3>
+              <span className="promotional-modal-terms">* Terms and conditions may apply.</span>
             </Col>
           </Row>
         </Container>

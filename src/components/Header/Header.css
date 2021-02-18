@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   width: 65vw;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   z-index: 5000;
   display: flex;
   flex-direction: row;
@@ -32,22 +32,12 @@
 
 @media screen and (max-width: 600px) {
   .header-contents {
-    /* position: fixed;
-    top: 0; */
     width: 90vw;
-    /* background-color: #FFFFFF; */
-    /* z-index: 5000; */
-    /* display: flex; */
     flex-direction: column;
     justify-content: center;
-    /* height: 1vh; */
-    margin: 1vh auto;
-    /* border-top-left-radius: 20px;
-    border-top-right-radius: 20px; */
+    margin: 0 auto;
   }
   .header-contents img {
-    /* margin: 1rem 1rem 1.5rem 2rem; */
-    /* height: 11.5vh; */
     margin: 0 auto;
   }
 }
