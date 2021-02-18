@@ -2,27 +2,21 @@ import { useState } from "react";
 import "./Main.css";
 import PromotionWindow from "../../components/PromotionWindow/PromotionWindow";
 import PromotionModal from "../../components/PromotionModal/PromotionModal";
+import config from "../../config.json";
 
-function Main(
-  allDays,
-  setOpenWindow
-) {
+function Main() {
 
   // For Production
   // const currentDate = moment().format("YYYYMMDD");
 
   // For Development
   const currentDate = "20210310";
-
-
-  function handleClick(day) {
-    setOpenWindow(day);
-  }
+  const allDays = config.days;
 
   const [showPromotionalModal, setShowPromotionalModal] = useState(false);
-  // const [openWindow, setOpenWindow] = useState(null);
 
   const handleClose = () => setShowPromotionalModal(false);
+
   const handleShow = () => {
     setShowPromotionalModal(true);
   };
@@ -30,7 +24,7 @@ function Main(
     setShowPromotionalModal(false);
   };
 
-  const promotionWindows = allDays.allDays.map((promotionWindow, index) => {
+  const promotionWindows = allDays.map((promotionWindow, index) => {
 
     return (
       <div

@@ -16,15 +16,3 @@
   border-color: #f2f2f2;
   box-shadow: none;
 }
-
-@media screen and (max-width: 600px) {
-  .app {
-    /* padding: 7rem 0 0; */
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .app {
-    /* padding: 50rem 0 0; */
-  }
-}

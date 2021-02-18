@@ -13,7 +13,6 @@
 
 .modal img {
   width: 35vw;
-  /* padding: 2vh; */
   background-color: #ffffff;
 }
 
@@ -99,6 +98,9 @@
   .promotional-modal-body .row {
     flex-direction: column;
   }
+  .promotional-modal-body h1 {
+    margin-top: 2vh;
+  }
   .modal img {
     width: 100%;
   }
@@ -117,7 +119,6 @@
   }
   .promotional-modal-body h1 {
     font-size: 24px;
-    margin-top: 2vh;
   }
   .promotional-modal-coupon-code h3,
   .promotional-modal-url {

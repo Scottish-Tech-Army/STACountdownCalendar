@@ -27,36 +27,45 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 1444px) {
-  .promotion-window-button {
-    /* height: 13.95vw;
-    width: 13.95vw; */
-  }
-}
-
-@media screen and (max-width: 1275px) {
-  .promotion-window-button {
-    /* height: 13.5vw !important;
-    width: 13.5vw !important; */
-  }
-}
-
-@media screen and (max-width: 600px) {
-  /* .promotion-window-button {
-    height: 90vw !important;
-    width: 90vw !important;
-  } */
-}
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1421px) {
   .main-container {
-    /* display: flex;
-    justify-content: center; */
-    /* height: 100%; */
+    width: 70vw;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1319px) {
+  .main-container {
+    width: 75vw;
+  }
+}
+
+@media screen and (max-width: 1231px) {
+  .main-container {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 1154px) {
+  .main-container {
+    width: 85vw;
+  }
+}
+
+@media screen and (max-width: 1087px) {
+  .main-container {
     width: 90vw;
-    /* margin: 0 auto; */
-    /* overflow-y: scroll; */
-    /* background-size: cover;
-    background-position: center; */
+  }
+}
+
+@media screen and (max-width: 1026px) {
+  .main-container {
+    width: 95vw;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .main-container {
+    width: 90vw;
   }
 }

@@ -14,6 +14,42 @@
   padding: 1rem;
 }
 
+@media screen and (max-width: 1421px) {
+  .footer-contents {
+    width: 70vw;
+  }
+}
+
+@media screen and (max-width: 1319px) {
+  .footer-contents {
+    width: 75vw;
+  }
+}
+
+@media screen and (max-width: 1231px) {
+  .footer-contents {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 1154px) {
+  .footer-contents {
+    width: 85vw;
+  }
+}
+
+@media screen and (max-width: 1087px) {
+  .footer-contents {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 1026px) {
+  .footer-contents {
+    width: 95vw;
+  }
+}
+
 @media screen and (max-width: 414px) {
   .footer-contents {
     width: 90vw;

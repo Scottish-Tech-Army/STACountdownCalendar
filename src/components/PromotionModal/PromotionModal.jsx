@@ -1,13 +1,18 @@
 import "./PromotionModal.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCopy, faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+import { faCopy } from "@fortawesome/free-solid-svg-icons";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import CarouselComponent from '../CarouselComponent/CarouselComponent.jsx'
 
 function PromotionModal({ show, handleClose }) {
+
+
+  const carouselContent = [{"media-type": "image", "media-url": "/assets/AdrianosFishAndChips.png"}]
+
   return (
     <Modal show={show} aria-labelledby="contained-modal-title-vcenter" centered>
       <Modal.Header className="promotion-modal-header">
@@ -27,7 +32,7 @@ function PromotionModal({ show, handleClose }) {
         <Container className="promotional-modal-body">
           <Row>
             <Col>
-              <img src="/assets/AdrianosFishAndChips.png" alt="placeholder" />
+              <CarouselComponent content ={carouselContent}/>
             </Col>
             <Col className="promotional-modal-detail">
               <span>
