@@ -7,12 +7,15 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import moment from "moment";
 
-function CountdownTimer({ show, handleClose, currentDate }) {
+function CountdownTimer({ show, handleClose, openWindow }) {
 
-  const countdownDate = new Date("03/11/2021").getTime();
+  const openWindowDate = moment(openWindow).format("MM/DD/YYYY");
+
+  const countdownDate = new Date(openWindowDate).getTime();
 
   const [state, setState] = useState({
     days: 0,
+
     hours: 0,
     minutes: 0,
     seconds: 0,
@@ -22,6 +25,7 @@ function CountdownTimer({ show, handleClose, currentDate }) {
 
     const updateCountdown = () => {
       if (countdownDate) {
+
         // Get the current time
         const currentTime = new Date().getTime();
 

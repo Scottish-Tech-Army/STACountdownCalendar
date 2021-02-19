@@ -35,41 +35,36 @@
 
 @media screen and (max-width: 1421px) {
   .header-contents {
-    width: 70vw;
-  }
-}
-
-@media screen and (max-width: 1319px) {
-  .header-contents {
     width: 75vw;
+    margin: 0 auto;
   }
 }
 
-@media screen and (max-width: 1231px) {
+@media screen and (max-width: 1325px) {
   .header-contents {
     width: 80vw;
   }
 }
 
-@media screen and (max-width: 1154px) {
+@media screen and (max-width: 1246px) {
   .header-contents {
     width: 85vw;
   }
 }
 
-@media screen and (max-width: 1087px) {
+@media screen and (max-width: 1173px) {
   .header-contents {
     width: 90vw;
   }
 }
 
-@media screen and (max-width: 1026px) {
+@media screen and (max-width: 1108px) {
   .header-contents {
     width: 95vw;
   }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 1049px) {
   .header-contents {
     width: 100vw;
   }

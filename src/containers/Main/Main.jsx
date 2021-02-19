@@ -16,6 +16,7 @@ function Main() {
 
   const [showPromotionalModal, setShowPromotionalModal] = useState(false);
   const [showCountdownTimer, setShowCountdownTimer] = useState(false);
+  const [openWindow, setOpenWindow] = useState("");
 
   const handleClose = () => {
     setShowPromotionalModal(false);
@@ -35,7 +36,9 @@ function Main() {
       <div
         key={index}
         onClick={
-          promotionWindow["days-date"] <= currentDate ? handleShow : handleNotShow
+          promotionWindow["days-date"] <= currentDate
+            ? handleShow
+            : handleNotShow
         }
         className={
           promotionWindow["days-date"] !== currentDate
@@ -65,6 +68,7 @@ function Main() {
       <PromotionModal show={showPromotionalModal} handleClose={handleClose} />
       <CountdownTimer
         currentDate={currentDate}
+        openWindow="2021-03-31"
         show={showCountdownTimer}
         handleClose={handleClose}
       />
