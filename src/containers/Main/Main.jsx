@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./Main.css";
 import PromotionWindow from "../../components/PromotionWindow/PromotionWindow";
 import PromotionModal from "../../components/PromotionModal/PromotionModal";
+import CountdownTimer from "../../components/CountdownTimer/CountdownTimer";
 import config from "../../config.json";
 
 function Main() {
@@ -14,14 +15,18 @@ function Main() {
   const allDays = config.days;
 
   const [showPromotionalModal, setShowPromotionalModal] = useState(false);
+  const [showCountdownTimer, setShowCountdownTimer] = useState(false);
 
-  const handleClose = () => setShowPromotionalModal(false);
+  const handleClose = () => {
+    setShowPromotionalModal(false)
+    setShowCountdownTimer(false)
+  };
 
   const handleShow = () => {
     setShowPromotionalModal(true);
   };
   const handleNotShow = () => {
-    setShowPromotionalModal(false);
+    setShowCountdownTimer(true);
   };
 
   const promotionWindows = allDays.map((promotionWindow, index) => {
@@ -56,6 +61,7 @@ function Main() {
     >
       <div className="promotion-window-container">{promotionWindows}</div>
       <PromotionModal show={showPromotionalModal} handleClose={handleClose} />
+      <CountdownTimer currentDate={currentDate} show={showCountdownTimer} handleClose={handleClose} />
     </div>
   );
 }

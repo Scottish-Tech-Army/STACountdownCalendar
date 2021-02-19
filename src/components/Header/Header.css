@@ -67,11 +67,20 @@
   .header-contents {
     width: 95vw;
   }
+}
+
+@media screen and (max-width: 414px) {
+  .header-contents {
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 374px) {
   .logo-sole-dunbar-text-primary {
-    /* font-size: 1.75rem; */
+    font-size: 1.25rem;
   }
 
   .logo-sole-dunbar-text-secondary {
-    /* font-size: 1.5rem; */
+    font-size: 0.5rem;
   }
 }

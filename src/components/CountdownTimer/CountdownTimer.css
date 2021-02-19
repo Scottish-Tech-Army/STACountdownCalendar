@@ -1,0 +1,80 @@
+.modal {
+  z-index: 6000;
+}
+
+ .countdown-timer .modal-dialog {
+  max-width: 30vw;
+}
+
+.modal-content {
+  border-radius: 0;
+  border: none;
+}
+
+.modal-button {
+  background-color: #153d68;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.modal-button:hover {
+  background-color: #153d68;
+  border-color: #153d68;
+}
+
+.modal-backdrop {
+  z-index: 6000;
+}
+.modal-backdrop.show {
+  opacity: 0.7;
+}
+
+.countdown-wrapper {
+  color: #153d68;
+  background-color: #ffffff;
+}
+
+.countdown-timer-header,
+.modal-footer {
+  background-color: #ffffff;
+  color: #153d68;
+  border-radius: 0;
+  border-top: 0;
+  border-bottom: 0;
+  border-right: 0;
+  border-left: 0;
+}
+
+.countdown-timer-body {
+  padding: 2vh;
+  margin: 3vh auto;
+  color: #153d68;
+  background-color: #ffffff;
+  max-width: 40vw;
+  border-radius: 10px;
+}
+
+.time-section {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .countdown-timer-body .row {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .countdown-timer-body {
+    margin: 1vh auto;
+    max-width: 90vw;
+  }
+  .modal-body {
+    padding: 0;
+  }
+  .countdown-timer .modal-dialog {
+    max-width: 100%;
+  }
+}
