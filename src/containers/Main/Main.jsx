@@ -1,50 +1,74 @@
 import { useState } from "react";
 import "./Main.css";
-import moment from "moment";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Button from "react-bootstrap/Button";
 import PromotionWindow from "../../components/PromotionWindow/PromotionWindow";
 import PromotionModal from "../../components/PromotionModal/PromotionModal";
+import CountdownTimer from "../../components/CountdownTimer/CountdownTimer";
 import config from "../../config.json";
 
 function Main() {
-  const allDays = config.days;
-
   // For Production
-  // const currentDate = moment().format("YYYYMMDD");
+  // const currentDate = moment().format("YYYY-MM-DD");
 
   // For Development
-  const currentDate = "20210210";
+  const currentDate = "2021-03-10";
 
-  const [show, setShow] = useState(false);
-  // const [openWindow, setOpenWindow] = useState(null);
+  const allDays = config.Days;
 
-  const handleClose = () => setShow(false);
+  const [showPromotionalModal, setShowPromotionalModal] = useState(false);
+  const [showCountdownTimer, setShowCountdownTimer] = useState(false);
+
+  const handleClose = () => {
+    setShowPromotionalModal(false);
+    setShowCountdownTimer(false);
+  };
+
   const handleShow = () => {
-    setShow(true);
-  }
+    setShowPromotionalModal(true);
+  };
+
+  const handleNotShow = () => {
+    setShowCountdownTimer(true);
+  };
 
   const promotionWindows = allDays.map((promotionWindow, index) => {
     return (
-      <Button
+      <div
         key={index}
-        onClick={handleShow}
-        className={(promotionWindow.Date !== currentDate) ? "promotion-window-button" : "promotion-window-button-current-date"}
+        onClick={
+          promotionWindow["days-date"] <= currentDate ? handleShow : handleNotShow
+        }
+        className={
+          promotionWindow["days-date"] !== currentDate
+            ? "promotion-window-button"
+            : "promotion-window-button promotion-window-button-current-date"
+        }
       >
         <PromotionWindow
           currentDate={currentDate}
-          promotionWindowDate={moment(promotionWindow.Date)}
+          promotionWindowDate={promotionWindow["days-date"]}
         />
-      </Button>
+      </div>
     );
   });
 
   return (
-    <Container fluid className="main-container">
-      <Row className="promotion-window-container">{promotionWindows}</Row>
-      <PromotionModal show={show} handleClose={handleClose} />
-    </Container>
+    <div
+      className="main-container"
+      style={{
+        backgroundImage: `url(${
+          process.env.PUBLIC_URL + "/assets/SOLE-calendar-background.jpg"
+        })`,
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="promotion-window-container">{promotionWindows}</div>
+      <PromotionModal show={showPromotionalModal} handleClose={handleClose} />
+      <CountdownTimer
+        currentDate={currentDate}
+        show={showCountdownTimer}
+        handleClose={handleClose}
+      />
+    </div>
   );
 }
 

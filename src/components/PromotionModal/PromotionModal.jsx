@@ -1,47 +1,70 @@
 import "./PromotionModal.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCopy } from "@fortawesome/free-solid-svg-icons";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import CarouselComponent from '../CarouselComponent/CarouselComponent.jsx'
 
 function PromotionModal({ show, handleClose }) {
 
 
-  const carouselContent = [{"media-type": "image", "media-url": "public/assets/shutterstock_709738510.jpg"}]
+  const carouselContent = [{"media-type": "image", "media-url": "/assets/AdrianosFishAndChips.png"}]
 
   return (
-    <Modal
-      animation={false}
-      show={show}
-      onHide={handleClose}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Header closeButton>
+    <Modal show={show} aria-labelledby="contained-modal-title-vcenter" centered>
+      <Modal.Header className="promotion-modal-header">
         <Modal.Title id="contained-modal-title-vcenter">
-          <h1>Local Retailer</h1>
-          <h2>Date</h2>
+          <h3>Adriano's, 137 High St, Dunbar EH42 1ES</h3>
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>
-
-        <CarouselComponent content ={carouselContent}/>
-
-        <hr />
-        <h2>Promotion Description</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-          pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium.
-          In efficitur consectetur congue.
-        </p>
-        <p>
-          Vestibulum consectetur ut dui ac vehicula. Integer quis augue vitae mi
-          pulvinar scelerisque at vel dui. Ut dictum, massa a fringilla iaculis,
-          sem odio egestas est, id tempus ex ligula ut eros.
-        </p>
+      <Modal.Body
+        style={{
+          backgroundImage: `url(${
+            process.env.PUBLIC_URL + "/assets/modal-background.jpg"
+          })`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
+        <Container className="promotional-modal-body">
+          <Row>
+            <Col>
+              <CarouselComponent content ={carouselContent}/>
+            </Col>
+            <Col className="promotional-modal-detail">
+              <span>
+                <h1>10% Off @ Adrianos</h1>
+              </span>
+              <span className="promotional-modal-coupon-code">
+                <h3>
+                  Coupon Code: WEGOTSOLE2021
+                  <FontAwesomeIcon icon={faCopy} className="copy-paste" />
+                </h3>
+              </span>
+              <span className="promotional-modal-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+                pellentesque tellus bibendum ipsum cursus, vel sodales ante
+                pretium.
+              </span>
+              <h3>
+                <a className="promotional-modal-url" href="#">
+                  Link to SOLE Scotland platform.{" "}
+                </a>
+              </h3>
+              <span className="promotional-modal-terms">* Terms and conditions may apply.</span>
+            </Col>
+          </Row>
+        </Container>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="primary" onClick={handleClose} className="modal-button">
+        <Button
+          variant="primary"
+          onClick={handleClose}
+          className="modal-button"
+        >
           Close
         </Button>
       </Modal.Footer>

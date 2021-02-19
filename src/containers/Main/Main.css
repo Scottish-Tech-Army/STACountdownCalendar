@@ -1,48 +1,71 @@
 .main-container {
   display: flex;
   justify-content: center;
+  height: 70vh;
+  width: 65vw;
+  margin: 0 auto;
+  overflow-y: scroll;
+  background-size: cover;
+  background-position: center;
 }
 
-.promotion-window-button,
+.promotion-window-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0.75rem auto;
+}
+
 .promotion-window-button-current-date {
-  height: 14vw;
-  width: 14vw;
-  border: 1px solid #FFFFFF;
-  border-radius: 0;
-  padding: 0;
+  background-color: rgb(222, 220, 175, 0.75);
 }
 
-.promotion-window-button {
-  background-color: #3278A7;
+.promotion-window-button:hover {
+  background-color: rgb(256, 256, 256, 0.5);
+  border-color: #3278a7;
+  cursor: pointer;
 }
 
-.promotion-window-button-current-date {
-  background-color: #153D68;
-}
-
-.promotion-window-button:hover,
-.promotion-window-button-current-date:hover {
-  background-color: #153D68;
-  border-color: #153D68;
-}
-
-@media screen and (max-width: 1444px) {
-  .promotion-window-button {
-    height: 13.95vw;
-    width: 13.95vw;
+@media screen and (max-width: 1421px) {
+  .main-container {
+    width: 70vw;
+    margin: 0 auto;
   }
 }
 
-@media screen and (max-width: 1275px) {
-  .promotion-window-button {
-    height: 13.5vw !important;
-    width: 13.5vw !important;
+@media screen and (max-width: 1319px) {
+  .main-container {
+    width: 75vw;
   }
 }
 
-@media screen and (max-width: 600px) {
-  .promotion-window-button {
-    height: 90vw !important;
-    width: 90vw !important;
+@media screen and (max-width: 1231px) {
+  .main-container {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 1154px) {
+  .main-container {
+    width: 85vw;
+  }
+}
+
+@media screen and (max-width: 1087px) {
+  .main-container {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 1026px) {
+  .main-container {
+    width: 95vw;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .main-container {
+    width: 100vw;
   }
 }

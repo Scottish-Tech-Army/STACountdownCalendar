@@ -1,51 +1,61 @@
-.promotion-window-container {
-  margin: 0;
-}
-
-.promotion-window {
+.promotion-window-col {
+  position: relative;
+  text-align: center;
+  color: white;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
 }
 
-.promotion-window-date {
-  font-size: 3rem;
+.promotion-window-col .locked-window:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 2rem;
   font-weight: bold;
-  margin: 10px auto;
+  background-color: #3278a7;
+  padding: 0 0.5rem;
 }
 
-.promotion-window-day-text,
-.promotion-window-date-text {
-  font-size: 16px;
+.promotion-window-col img {
+  height: 12.5vh;
+  width: 12.5vh;
+  margin: 1rem;
 }
 
-@media screen and (max-width: 1275px) {
-
-  .promotion-window-date {
-    font-size: 1.5rem;
+@media screen and (max-width: 414px) {
+  .promotion-window-col img {
+    height: 85vw;
+    width: 85vw;
+    margin: 1rem auto;
   }
-
-  .promotion-window-day-text,
-  .promotion-window-date-text {
-    font-size: 0.75rem;
+  .bottom-right {
+    right: 0.5rem;
+    bottom: 1rem;
+    font-size: 3rem;
+    padding: 0.25rem 1rem;
   }
-}
-
-@media screen and (max-width: 600px) {
-
-  .promotion-window-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 20px;
-  }
-
-  .promotion-window-date {
-    font-weight: bold;
-    margin: 10px auto;
-  }
-
 }
