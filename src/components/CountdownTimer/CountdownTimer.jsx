@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import moment from "moment";
 
 function CountdownTimer({ show, handleClose, currentDate }) {
 
@@ -55,8 +56,6 @@ function CountdownTimer({ show, handleClose, currentDate }) {
 
     setInterval(() => updateCountdown(), 1000);
   }, [countdownDate]);
-
-
 
   return (
     <Modal

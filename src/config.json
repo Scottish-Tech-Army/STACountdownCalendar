@@ -1,116 +1,564 @@
 {
-  "days": [
+  "Days": [
     {
-      "Date": "20210301",
-      "component": ""
+      "id": 1,
+      "days-date": "2021-03-01",
+      "days-header-text": "Day 1 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     },
     {
-      "Date": "20210302",
-      "component": ""
+      "id": 2,
+      "days-date": "2021-03-02",
+      "days-header-text": "Day 2 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     },
     {
-      "Date": "20210303",
-      "component": ""
+      "id": 3,
+      "days-date": "2021-03-03",
+      "days-header-text": "Day 3 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     },
     {
-      "Date": "20210304",
-      "component": ""
+      "id": 4,
+      "days-date": "2021-03-04",
+      "days-header-text": "Day 4 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     },
     {
-      "Date": "20210305",
-      "component": ""
+      "id": 5,
+      "days-date": "2021-03-05",
+      "days-header-text": "Day 5 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     },
     {
-      "Date": "20210306",
-      "component": ""
+      "id": 6,
+      "days-date": "2021-03-06",
+      "days-header-text": "Day 6 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     },
     {
-      "Date": "20210307",
-      "component": ""
+      "id": 7,
+      "days-date": "2021-03-07",
+      "days-header-text": "Day 7 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     },
     {
-      "Date": "20210308",
-      "component": ""
+      "id": 8,
+      "days-date": "2021-03-08",
+      "days-header-text": "Day 8 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     },
     {
-      "Date": "20210309",
-      "component": ""
+      "id": 9,
+      "days-date": "2021-03-09",
+      "days-header-text": "Day 9 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     },
     {
-      "Date": "20210310",
-      "component": ""
+      "id": 10,
+      "days-date": "2021-03-10",
+      "days-header-text": "Day 10 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     },
     {
-      "Date": "20210311",
-      "component": ""
+      "id": 11,
+      "days-date": "2021-03-11",
+      "days-header-text": "Day 11 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     },
     {
-      "Date": "20210312",
-      "component": ""
+      "id": 12,
+      "days-date": "2021-03-12",
+      "days-header-text": "Day 12 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     },
     {
-      "Date": "20210313",
-      "component": ""
+      "id": 13,
+      "days-date": "2021-03-13",
+      "days-header-text": "Day 13 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     },
     {
-      "Date": "20210314",
-      "component": ""
+      "id": 14,
+      "days-date": "2021-03-14",
+      "days-header-text": "Day 14 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     },
     {
-      "Date": "20210315",
-      "component": ""
+      "id": 15,
+      "days-date": "2021-03-15",
+      "days-header-text": "Day 15 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     },
     {
-      "Date": "20210316",
-      "component": ""
+      "id": 16,
+      "days-date": "2021-03-16",
+      "days-header-text": "Day 16 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     },
     {
-      "Date": "20210317",
-      "component": ""
+      "id": 17,
+      "days-date": "2021-03-17",
+      "days-header-text": "Day 17 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     },
     {
-      "Date": "20210318",
-      "component": ""
+      "id": 18,
+      "days-date": "2021-03-18",
+      "days-header-text": "Day 18 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     },
     {
-      "Date": "20210319",
-      "component": ""
+      "id": 19,
+      "days-date": "2021-03-19",
+      "days-header-text": "Day 19 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     },
     {
-      "Date": "20210320",
-      "component": ""
+      "id": 20,
+      "days-date": "2021-03-20",
+      "days-header-text": "Day 20 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     },
     {
-      "Date": "20210321",
-      "component": ""
+      "id": 21,
+      "days-date": "2021-03-21",
+      "days-header-text": "Day 21 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     },
     {
-      "Date": "20210322",
-      "component": ""
+      "id": 22,
+      "days-date": "2021-03-22",
+      "days-header-text": "Day 22 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     },
     {
-      "Date": "20210323",
-      "component": ""
+      "id": 23,
+      "days-date": "2021-03-23",
+      "days-header-text": "Day 23 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     },
     {
-      "Date": "20210324",
-      "component": ""
+      "id": 24,
+      "days-date": "2021-03-24",
+      "days-header-text": "Day 24 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     },
     {
-      "Date": "20210325",
-      "component": ""
+      "id": 25,
+      "days-date": "2021-03-25",
+      "days-header-text": "Day 25 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     },
     {
-      "Date": "20210326",
-      "component": ""
+      "id": 26,
+      "days-date": "2021-03-26",
+      "days-header-text": "Day 26 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     },
     {
-      "Date": "20210327",
-      "component": ""
+      "id": 27,
+      "days-date": "2021-03-27",
+      "days-header-text": "Day 27 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     },
     {
-      "Date": "20210328",
-      "component": ""
+      "id": 28,
+      "days-date": "2021-03-28",
+      "days-header-text": "Day 28 of launch",
+      "external-url": "https://scottishtecharmy.org",
+      "days-content-text": "Promotion Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque tellus bibendum ipsum cursus, vel sodales ante pretium. In efficitur consectetur congue.",
+      "coupon-code": "WEGOTSOLE2021",
+      "days-media": {
+        "media-1": {
+          "id": 1,
+          "media-type": "video",
+          "media-url": "https://www.youtube.com/watch?v=U42wsVF82J4"
+        },
+        "media-2": {
+          "id": 2,
+          "media-type": "image",
+          "media-url": "assets/shutterstock_709738510.jpg"
+        }
+      }
     }
   ]
 }
