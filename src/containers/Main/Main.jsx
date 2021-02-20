@@ -16,29 +16,43 @@ function Main() {
 
   const [showPromotionalModal, setShowPromotionalModal] = useState(false);
   const [showCountdownTimer, setShowCountdownTimer] = useState(false);
-  const [openWindow, setOpenWindow] = useState("");
+  const [openWindow, setOpenWindow] = useState(null);
+  const [openWindowDescription, setOpenWindowDescription] = useState(null);
+  const [openWindowCouponCode, setOpenWindowCouponCode] = useState(null);
+  const [openWindowUrl, setOpenWindowUrl] = useState(null);
 
   const handleClose = () => {
     setShowPromotionalModal(false);
     setShowCountdownTimer(false);
+    setOpenWindow(null);
   };
 
-  const handleShow = () => {
+  function handleShowPromotion(day, coupon, description, url) {
+    setOpenWindow(day);
+    setOpenWindowCouponCode(coupon);
+    setOpenWindowDescription(description);
+    setOpenWindowUrl(url);
     setShowPromotionalModal(true);
-  };
+  }
 
-  const handleNotShow = () => {
+  function handleShowTimer(day) {
+    setOpenWindow(day);
     setShowCountdownTimer(true);
-  };
+  }
 
   const promotionWindows = allDays.map((promotionWindow, index) => {
     return (
       <div
         key={index}
-        onClick={
+        onClick={() =>
           promotionWindow["days-date"] <= currentDate
-            ? handleShow
-            : handleNotShow
+            ? handleShowPromotion(
+                promotionWindow["days-date"],
+                promotionWindow["coupon-code"],
+                promotionWindow["days-content-text"],
+                promotionWindow["external-url"]
+              )
+            : handleShowTimer(promotionWindow["days-date"])
         }
         className={
           promotionWindow["days-date"] !== currentDate
@@ -65,10 +79,17 @@ function Main() {
       }}
     >
       <div className="promotion-window-container">{promotionWindows}</div>
-      <PromotionModal show={showPromotionalModal} handleClose={handleClose} />
+      <PromotionModal
+        show={showPromotionalModal}
+        handleClose={handleClose}
+        openWindowCouponCode={openWindowCouponCode}
+        openWindowDescription={openWindowDescription}
+        openWindowUrl={openWindowUrl}
+        openWindow={openWindow}
+      />
       <CountdownTimer
         currentDate={currentDate}
-        openWindow="2021-03-31"
+        openWindow={openWindow}
         show={showCountdownTimer}
         handleClose={handleClose}
       />
