@@ -7,9 +7,11 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import moment from "moment";
 
-function CountdownTimer({ show, handleClose, currentDate }) {
-
-  const countdownDate = new Date("03/11/2021").getTime();
+function CountdownTimer({ show, handleClose, openWindow }) {
+  const openWindowDate = openWindow
+    ? moment(openWindow.day["days-date"]).format("MM/DD/YYYY")
+    : "";
+  const countdownDate = new Date(openWindowDate).getTime();
 
   const [state, setState] = useState({
     days: 0,
@@ -19,42 +21,46 @@ function CountdownTimer({ show, handleClose, currentDate }) {
   });
 
   useEffect(() => {
-
     const updateCountdown = () => {
-      if (countdownDate) {
-        // Get the current time
-        const currentTime = new Date().getTime();
+      // Get the current time
+      const currentTime = new Date().getTime();
 
-        // Get the time remaining until the countdown date
-        const distanceToDate = countdownDate - currentTime;
+      // Get the time remaining until the countdown date
+      const distanceToDate = countdownDate - currentTime;
 
-        // Calculate days, hours, minutes and seconds remaining
-        let days = Math.floor(distanceToDate / (1000 * 60 * 60 * 24));
-        let hours = Math.floor(
-          (distanceToDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        let minutes = Math.floor(
-          (distanceToDate % (1000 * 60 * 60)) / (1000 * 60)
-        );
-        let seconds = Math.floor((distanceToDate % (1000 * 60)) / 1000);
+      // Calculate days, hours, minutes and seconds remaining
+      let days = Math.floor(distanceToDate / (1000 * 60 * 60 * 24));
+      let hours = Math.floor(
+        (distanceToDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      let minutes = Math.floor(
+        (distanceToDate % (1000 * 60 * 60)) / (1000 * 60)
+      );
+      let seconds = Math.floor((distanceToDate % (1000 * 60)) / 1000);
 
-        // For visual appeal, add a zero to each number that's only one digit
-        const numbersToAddZeroTo = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      // For visual appeal, add a zero to each number that's only one digit
+      const numbersToAddZeroTo = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-        if (numbersToAddZeroTo.includes(hours)) {
-          hours = `0${hours}`;
-        } else if (numbersToAddZeroTo.includes(minutes)) {
-          minutes = `0${minutes}`;
-        } else if (numbersToAddZeroTo.includes(seconds)) {
-          seconds = `0${seconds}`;
-        }
-
-        // Set the state to each new time
-        setState({ days: days, hours: hours, minutes, seconds });
+      if (numbersToAddZeroTo.includes(hours)) {
+        hours = `0${hours}`;
+      } else if (numbersToAddZeroTo.includes(minutes)) {
+        minutes = `0${minutes}`;
+      } else if (numbersToAddZeroTo.includes(seconds)) {
+        seconds = `0${seconds}`;
       }
+
+      // Set the state to each new time
+      setState({
+        days: days,
+        hours: hours,
+        minutes: minutes,
+        seconds: seconds,
+      });
     };
 
-    setInterval(() => updateCountdown(), 1000);
+    const intervalId = setInterval(() => updateCountdown(), 1000);
+
+    return () => clearInterval(intervalId);
   }, [countdownDate]);
 
   return (

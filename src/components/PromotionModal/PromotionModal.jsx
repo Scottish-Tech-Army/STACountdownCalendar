@@ -6,12 +6,16 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import CarouselComponent from '../CarouselComponent/CarouselComponent.jsx'
+import CarouselComponent from "../CarouselComponent/CarouselComponent.jsx";
 
-function PromotionModal({ show, handleClose }) {
-
-
-  const carouselContent = [{"media-type": "image", "media-url": "/assets/AdrianosFishAndChips.png"}]
+function PromotionModal({
+  show,
+  handleClose,
+  openWindow
+}) {
+  const carouselContent = [
+    { "media-type": "image", "media-url": "/assets/AdrianosFishAndChips.png" },
+  ];
 
   return (
     <Modal show={show} aria-labelledby="contained-modal-title-vcenter" centered>
@@ -32,7 +36,7 @@ function PromotionModal({ show, handleClose }) {
         <Container className="promotional-modal-body">
           <Row>
             <Col>
-              <CarouselComponent content ={carouselContent}/>
+              <CarouselComponent content={carouselContent} />
             </Col>
             <Col className="promotional-modal-detail">
               <span>
@@ -40,21 +44,21 @@ function PromotionModal({ show, handleClose }) {
               </span>
               <span className="promotional-modal-coupon-code">
                 <h3>
-                  Coupon Code: WEGOTSOLE2021
+                  Coupon Code: {openWindow ? openWindow.day["coupon-code"] : ""}
                   <FontAwesomeIcon icon={faCopy} className="copy-paste" />
                 </h3>
               </span>
               <span className="promotional-modal-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                pellentesque tellus bibendum ipsum cursus, vel sodales ante
-                pretium.
+               {openWindow ? openWindow.day["days-content-text"] : ""}
               </span>
               <h3>
-                <a className="promotional-modal-url" href="#">
+                <a className="promotional-modal-url" href={openWindow ? openWindow.day["external-url"] : "#"}>
                   Link to SOLE Scotland platform.{" "}
                 </a>
               </h3>
-              <span className="promotional-modal-terms">* Terms and conditions may apply.</span>
+              <span className="promotional-modal-terms">
+                * Terms and conditions may apply.
+              </span>
             </Col>
           </Row>
         </Container>

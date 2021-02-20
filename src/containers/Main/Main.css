@@ -30,36 +30,30 @@
 
 @media screen and (max-width: 1421px) {
   .main-container {
-    width: 70vw;
+    width: 75vw;
     margin: 0 auto;
   }
 }
 
-@media screen and (max-width: 1319px) {
-  .main-container {
-    width: 75vw;
-  }
-}
-
-@media screen and (max-width: 1231px) {
+@media screen and (max-width: 1325px) {
   .main-container {
     width: 80vw;
   }
 }
 
-@media screen and (max-width: 1154px) {
+@media screen and (max-width: 1246px) {
   .main-container {
     width: 85vw;
   }
 }
 
-@media screen and (max-width: 1087px) {
+@media screen and (max-width: 1173px) {
   .main-container {
     width: 90vw;
   }
 }
 
-@media screen and (max-width: 1026px) {
+@media screen and (max-width: 1108px) {
   .main-container {
     width: 95vw;
   }
@@ -70,7 +64,7 @@
   }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 1049px) {
   .main-container {
     width: 100vw;
   }
