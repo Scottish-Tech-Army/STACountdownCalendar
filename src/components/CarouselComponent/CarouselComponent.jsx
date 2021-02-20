@@ -5,10 +5,15 @@ import ReactPlayer from 'react-player/lazy'
 
 
 const CarouselComponent = ({content}) => {
+    let showCarouselControls = true;
+
+    if (content.length === 1) { 
+        showCarouselControls = false
+    }
 
 
-
-return <Carousel>
+return <Carousel controls={showCarouselControls} indicators={showCarouselControls}>
+   
     {content.map((item, id) => (
         <Carousel.Item key={id}>
             {item["media-type"] === "image" ?    //if media-type is image then...

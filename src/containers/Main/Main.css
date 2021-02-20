@@ -19,6 +19,7 @@
 
 .promotion-window-button-current-date {
   background-color: rgb(222, 220, 175, 0.75);
+  position: relative; /* this is here to make our "invisible anchor" div work properly */
 }
 
 .promotion-window-button:hover {
@@ -55,6 +56,11 @@
 @media screen and (max-width: 1108px) {
   .main-container {
     width: 95vw;
+  }
+
+  .promotion-window-button-anchor {
+    position: absolute;
+    top: -12vh; /* for autoscroll - edit this value to compensate for the header height */
   }
 }
 
