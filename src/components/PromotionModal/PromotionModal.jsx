@@ -11,9 +11,7 @@ import CarouselComponent from "../CarouselComponent/CarouselComponent.jsx";
 function PromotionModal({
   show,
   handleClose,
-  openWindowDescription,
-  openWindowUrl,
-  openWindowCouponCode
+  openWindow
 }) {
   const carouselContent = [
     { "media-type": "image", "media-url": "/assets/AdrianosFishAndChips.png" },
@@ -46,15 +44,15 @@ function PromotionModal({
               </span>
               <span className="promotional-modal-coupon-code">
                 <h3>
-                  Coupon Code: {openWindowCouponCode}
+                  Coupon Code: {openWindow ? openWindow.day["coupon-code"] : ""}
                   <FontAwesomeIcon icon={faCopy} className="copy-paste" />
                 </h3>
               </span>
               <span className="promotional-modal-description">
-                {openWindowDescription}
+               {openWindow ? openWindow.day["days-content-text"] : ""}
               </span>
               <h3>
-                <a className="promotional-modal-url" href={openWindowUrl}>
+                <a className="promotional-modal-url" href={openWindow ? openWindow.day["external-url"] : "#"}>
                   Link to SOLE Scotland platform.{" "}
                 </a>
               </h3>

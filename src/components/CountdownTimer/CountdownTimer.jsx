@@ -8,8 +8,9 @@ import Col from "react-bootstrap/Col";
 import moment from "moment";
 
 function CountdownTimer({ show, handleClose, openWindow }) {
-
-  const openWindowDate = moment(openWindow).format("MM/DD/YYYY");
+  const openWindowDate = openWindow
+    ? moment(openWindow.day["days-date"]).format("MM/DD/YYYY")
+    : "";
   const countdownDate = new Date(openWindowDate).getTime();
 
   const [state, setState] = useState({
@@ -20,7 +21,6 @@ function CountdownTimer({ show, handleClose, openWindow }) {
   });
 
   useEffect(() => {
-
     const updateCountdown = () => {
       // Get the current time
       const currentTime = new Date().getTime();
@@ -61,7 +61,6 @@ function CountdownTimer({ show, handleClose, openWindow }) {
     const intervalId = setInterval(() => updateCountdown(), 1000);
 
     return () => clearInterval(intervalId);
-
   }, [countdownDate]);
 
   return (

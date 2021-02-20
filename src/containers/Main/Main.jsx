@@ -17,26 +17,26 @@ function Main() {
   const [showPromotionalModal, setShowPromotionalModal] = useState(false);
   const [showCountdownTimer, setShowCountdownTimer] = useState(false);
   const [openWindow, setOpenWindow] = useState(null);
-  const [openWindowDescription, setOpenWindowDescription] = useState(null);
-  const [openWindowCouponCode, setOpenWindowCouponCode] = useState(null);
-  const [openWindowUrl, setOpenWindowUrl] = useState(null);
-
+  
   const handleClose = () => {
     setShowPromotionalModal(false);
     setShowCountdownTimer(false);
     setOpenWindow(null);
   };
 
-  function handleShowPromotion(day, coupon, description, url) {
-    setOpenWindow(day);
-    setOpenWindowCouponCode(coupon);
-    setOpenWindowDescription(description);
-    setOpenWindowUrl(url);
+  function handleShowPromotion(day) {
+    const openWindowDate = {
+      "day" : day
+    };
+    setOpenWindow(openWindowDate);
     setShowPromotionalModal(true);
   }
 
   function handleShowTimer(day) {
-    setOpenWindow(day);
+    const openWindowDate = {
+      "day" : day
+    };
+    setOpenWindow(openWindowDate);
     setShowCountdownTimer(true);
   }
 
@@ -47,12 +47,9 @@ function Main() {
         onClick={() =>
           promotionWindow["days-date"] <= currentDate
             ? handleShowPromotion(
-                promotionWindow["days-date"],
-                promotionWindow["coupon-code"],
-                promotionWindow["days-content-text"],
-                promotionWindow["external-url"]
+                promotionWindow
               )
-            : handleShowTimer(promotionWindow["days-date"])
+            : handleShowTimer(promotionWindow)
         }
         className={
           promotionWindow["days-date"] !== currentDate
@@ -82,9 +79,6 @@ function Main() {
       <PromotionModal
         show={showPromotionalModal}
         handleClose={handleClose}
-        openWindowCouponCode={openWindowCouponCode}
-        openWindowDescription={openWindowDescription}
-        openWindowUrl={openWindowUrl}
         openWindow={openWindow}
       />
       <CountdownTimer
