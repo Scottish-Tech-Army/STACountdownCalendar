@@ -7,7 +7,7 @@ import config from '../../config.json';
 import smoothscroll from 'smoothscroll-polyfill';
 
 function Main() {
-  smoothscroll.polyfill();
+  smoothscroll.polyfill(); //Polyfill for smooth-scrolling on iOS Safari
   window.history.scrollRestoration = 'manual'; //Stop browser recalling last scroll location
 
   // For Production
@@ -75,7 +75,7 @@ function Main() {
   });
 
   useEffect(() => {
-    // //handles mobile/vertical view autoscroll
+    //handles mobile/vertical view autoscroll
     if (window.matchMedia('(max-width: 1026px)').matches) {
       document
         .getElementById(currentDate)
