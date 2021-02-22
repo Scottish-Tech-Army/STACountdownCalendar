@@ -17,6 +17,7 @@
     "react-player": "^2.8.2",
     "react-scripts": "4.0.1",
     "react-swipeable": "^6.0.1",
+    "smoothscroll-polyfill": "^0.4.4",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

@@ -4,8 +4,10 @@ import PromotionWindow from '../../components/PromotionWindow/PromotionWindow';
 import PromotionModal from '../../components/PromotionModal/PromotionModal';
 import CountdownTimer from '../../components/CountdownTimer/CountdownTimer';
 import config from '../../config.json';
+import smoothscroll from 'smoothscroll-polyfill';
 
 function Main() {
+  smoothscroll.polyfill();
   window.history.scrollRestoration = 'manual'; //Stop browser recalling last scroll location
 
   // For Production
@@ -28,7 +30,7 @@ function Main() {
 
   function handleShowPromotion(day) {
     const openWindowDate = {
-      "day" : day
+      day: day,
     };
     setOpenWindow(openWindowDate);
     setShowPromotionalModal(true);
@@ -36,7 +38,7 @@ function Main() {
 
   function handleShowTimer(day) {
     const openWindowDate = {
-      "day" : day
+      day: day,
     };
     setOpenWindow(openWindowDate);
     setShowCountdownTimer(true);
@@ -47,10 +49,8 @@ function Main() {
       <div
         key={index}
         onClick={() =>
-          promotionWindow["days-date"] <= currentDate
-            ? handleShowPromotion(
-                promotionWindow
-              )
+          promotionWindow['days-date'] <= currentDate
+            ? handleShowPromotion(promotionWindow)
             : handleShowTimer(promotionWindow)
         }
         className={
@@ -75,14 +75,17 @@ function Main() {
   });
 
   useEffect(() => {
-    //handles mobile/vertical view autoscroll
+    // //handles mobile/vertical view autoscroll
     if (window.matchMedia('(max-width: 1026px)').matches) {
-      document.getElementById(currentDate).scrollIntoView();
+      document
+        .getElementById(currentDate)
+        .scrollIntoView({ behavior: 'smooth' });
     }
   });
 
   return (
     <div
+      id="main-container"
       className="main-container"
       style={{
         backgroundImage: `url(${
