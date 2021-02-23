@@ -60,7 +60,7 @@
 
   .promotion-window-button-anchor {
     position: absolute;
-    top: -12vh; /* for autoscroll - edit this value to compensate for the header height */
+    top: -1vh; /* for autoscroll - edit this value to compensate for the header height */
   }
 }
 

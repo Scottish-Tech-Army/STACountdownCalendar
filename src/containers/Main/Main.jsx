@@ -4,10 +4,12 @@ import PromotionWindow from '../../components/PromotionWindow/PromotionWindow';
 import PromotionModal from '../../components/PromotionModal/PromotionModal';
 import CountdownTimer from '../../components/CountdownTimer/CountdownTimer';
 import config from '../../config.json';
-import smoothscroll from 'smoothscroll-polyfill';
+import { gsap } from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
 function Main() {
-  smoothscroll.polyfill(); //Polyfill for smooth-scrolling on iOS Safari
+  gsap.registerPlugin(ScrollToPlugin);
+
   window.history.scrollRestoration = 'manual'; //Stop browser recalling last scroll location
 
   // For Production
@@ -62,7 +64,7 @@ function Main() {
         {promotionWindow['days-date'] === currentDate ? ( //adds an invisible "anchor" div to current day for auto-scroll.
           <div
             className="promotion-window-button-anchor"
-            id={promotionWindow['days-date']}
+            id={`id-${promotionWindow['days-date']}`} //adding non-numerical ID for GSAP plugin to target
           ></div>
         ) : null}
 
@@ -76,10 +78,12 @@ function Main() {
 
   useEffect(() => {
     //handles mobile/vertical view autoscroll
-    if (window.matchMedia('(max-width: 1026px)').matches) {
-      document
-        .getElementById(currentDate)
-        .scrollIntoView({ behavior: 'smooth' });
+    if (window.matchMedia('(max-width: 811px)').matches) {
+      gsap.to('#main-container', {
+        duration: window.matchMedia('(max-width: 414px)').matches ? 2 : 1.5, //different scroll speeds for breakpoints
+        scrollTo: `#id-${currentDate}`,
+        ease: 'inOut',
+      });
     }
   });
 
