@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import "./PromotionModal.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy } from "@fortawesome/free-solid-svg-icons";
@@ -8,11 +9,17 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import CarouselComponent from "../CarouselComponent/CarouselComponent.jsx";
 
-function PromotionModal({
-  show,
-  handleClose,
-  openWindow
-}) {
+function PromotionModal({ show, handleClose, openWindow, currentDate }) {
+  const [expired, setExpired] = useState(false);
+
+  useEffect(() => {
+    if (openWindow && openWindow.day["days-date"] < currentDate) {
+      setExpired(true);
+    } else {
+      setExpired(false);
+    }
+  }, [openWindow]);
+
   const carouselContent = [
     { "media-type": "image", "media-url": "/assets/AdrianosFishAndChips.png" },
   ];
@@ -37,6 +44,15 @@ function PromotionModal({
           <Row>
             <Col>
               <CarouselComponent content={carouselContent} />
+              <img
+                src="assets/expired.svg"
+                alt="expired offer notice"
+                className={
+                  expired
+                    ? "promotional-modal-overlay-text"
+                    : "promotional-modal-overlay-text promotional-modal-overlay-text-hidden"
+                }
+              />
             </Col>
             <Col className="promotional-modal-detail">
               <span>
@@ -49,10 +65,13 @@ function PromotionModal({
                 </h3>
               </span>
               <span className="promotional-modal-description">
-               {openWindow ? openWindow.day["days-content-text"] : ""}
+                {openWindow ? openWindow.day["days-content-text"] : ""}
               </span>
               <h3>
-                <a className="promotional-modal-url" href={openWindow ? openWindow.day["external-url"] : "#"}>
+                <a
+                  className="promotional-modal-url"
+                  href={openWindow ? openWindow.day["external-url"] : "#"}
+                >
                   Link to SOLE Scotland platform.{" "}
                 </a>
               </h3>

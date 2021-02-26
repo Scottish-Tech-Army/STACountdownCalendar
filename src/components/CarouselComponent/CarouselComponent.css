@@ -13,21 +13,31 @@
   background-color: rgba(0, 0, 0, 0.5);
 } */
 
-img {
+/* img {
   width: 689px;
   height: 395px;
   object-fit: cover;
+} */
+
+.supplier-img {
+  width: 35vw;
 }
 
 .vid-wrapper {
   height: 395px;
 }
 
+@media screen and (max-width: 1024px) {
+  .supplier-img {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 700px) {
-  img {
+  /* img {
     width: 300px;
     height: 300px;
-  }
+  } */
 
   .vid-wrapper {
     height: 300px;
@@ -35,10 +45,10 @@ img {
 }
 
 @media screen and (max-width: 500px) {
-  img {
+  /* img {
     width: 130px;
     height: 190px;
-  }
+  } */
 
   .vid-wrapper {
     height: 190px;

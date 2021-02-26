@@ -102,6 +102,7 @@ function Main() {
       <PromotionModal
         show={showPromotionalModal}
         handleClose={handleClose}
+        currentDate={currentDate}
         openWindow={openWindow}
       />
       <CountdownTimer
