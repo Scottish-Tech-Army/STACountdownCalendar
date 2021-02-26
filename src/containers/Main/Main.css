@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   height: 70vh;
-  width: 65vw;
-  margin: 0 auto;
+  width: 100vw;
+  margin: 0;
   overflow-y: auto;
   background-size: cover;
   background-position: center;
@@ -15,6 +15,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0.75rem auto;
+  width: 65vw;
 }
 
 .promotion-window-button-current-date {
@@ -28,33 +29,20 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 1421px) {
-  .main-container {
-    width: 75vw;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 1325px) {
-  .main-container {
-    width: 80vw;
-  }
-}
-
 @media screen and (max-width: 1246px) {
-  .main-container {
+  .promotion-window-container {
     width: 85vw;
   }
 }
 
 @media screen and (max-width: 1173px) {
-  .main-container {
+  .promotion-window-container {
     width: 90vw;
   }
 }
 
 @media screen and (max-width: 1108px) {
-  .main-container {
+  .promotion-window-container {
     width: 95vw;
   }
 
@@ -65,7 +53,7 @@
 }
 
 @media screen and (max-width: 1049px) {
-  .main-container {
+  .promotion-window-container {
     width: 100vw;
   }
 }

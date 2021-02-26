@@ -1,7 +1,7 @@
 .footer-contents {
   position: fixed;
   bottom: 0;
-  width: 65vw;
+  width: 100vw;
   background-color: #FFFFFF;
   z-index: 5000;
   display: flex;
@@ -14,46 +14,14 @@
   padding: 1rem;
 }
 
-@media screen and (max-width: 1421px) {
-  .footer-contents {
-    width: 75vw;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 1325px) {
-  .footer-contents {
-    width: 80vw;
-  }
-}
-
-@media screen and (max-width: 1246px) {
-  .footer-contents {
-    width: 85vw;
-  }
-}
-
-@media screen and (max-width: 1173px) {
-  .footer-contents {
-    width: 90vw;
-  }
-}
-
-@media screen and (max-width: 1108px) {
-  .footer-contents {
-    width: 95vw;
-  }
-}
-
-@media screen and (max-width: 1049px) {
-  .footer-contents {
-    width: 100vw;
-  }
-}
-
 @media screen and (max-width: 414px) {
   .footer-contents {
-    margin: 0 auto;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .footer-contents {
     font-size: 0.75rem;
   }
 }

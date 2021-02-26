@@ -1,81 +1,32 @@
 .header-contents {
   position: fixed;
   top: 0;
-  width: 65vw;
+  width: 100vw;
   background-color: #ffffff;
   z-index: 5000;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 15vh;
   margin-top: 0;
 }
 
-.logo-sole-dunbar-text-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.logo-sole-dunbar-text-primary {
+.logo-dunbar-text {
   color: #3278a7;
   font-size: 1.5rem;
 }
 
-.logo-sole-dunbar-text-secondary {
-  color: #153d68;
-  font-size: 0.75rem;
-}
-
 .header-contents img {
-  margin: 0 0.5rem 0 2rem;
-  height: 7.5vh;
-  width: 7.5vh;
+  height: 10vh;
+  width: auto;
 }
 
-@media screen and (max-width: 1421px) {
-  .header-contents {
-    width: 75vw;
-    margin: 0 auto;
+@media screen and (max-width: 413px) {
+  .logo-dunbar-text {
+    font-size: 1rem;
   }
-}
-
-@media screen and (max-width: 1325px) {
-  .header-contents {
-    width: 80vw;
-  }
-}
-
-@media screen and (max-width: 1246px) {
-  .header-contents {
-    width: 85vw;
-  }
-}
-
-@media screen and (max-width: 1173px) {
-  .header-contents {
-    width: 90vw;
-  }
-}
-
-@media screen and (max-width: 1108px) {
-  .header-contents {
-    width: 95vw;
-  }
-}
-
-@media screen and (max-width: 1049px) {
-  .header-contents {
-    width: 100vw;
-  }
-}
-
-@media screen and (max-width: 374px) {
-  .logo-sole-dunbar-text-primary {
-    font-size: 1.25rem;
-  }
-
-  .logo-sole-dunbar-text-secondary {
-    font-size: 0.5rem;
+  .header-contents img {
+    height: 9vh;
   }
 }
