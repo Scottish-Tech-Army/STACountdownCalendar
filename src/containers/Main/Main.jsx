@@ -4,8 +4,12 @@ import PromotionWindow from '../../components/PromotionWindow/PromotionWindow';
 import PromotionModal from '../../components/PromotionModal/PromotionModal';
 import CountdownTimer from '../../components/CountdownTimer/CountdownTimer';
 import config from '../../config.json';
+import { gsap } from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
 function Main() {
+  gsap.registerPlugin(ScrollToPlugin);
+
   window.history.scrollRestoration = 'manual'; //Stop browser recalling last scroll location
 
   // For Production
@@ -28,7 +32,7 @@ function Main() {
 
   function handleShowPromotion(day) {
     const openWindowDate = {
-      "day" : day
+      day: day,
     };
     setOpenWindow(openWindowDate);
     setShowPromotionalModal(true);
@@ -36,7 +40,7 @@ function Main() {
 
   function handleShowTimer(day) {
     const openWindowDate = {
-      "day" : day
+      day: day,
     };
     setOpenWindow(openWindowDate);
     setShowCountdownTimer(true);
@@ -47,10 +51,8 @@ function Main() {
       <div
         key={index}
         onClick={() =>
-          promotionWindow["days-date"] <= currentDate
-            ? handleShowPromotion(
-                promotionWindow
-              )
+          promotionWindow['days-date'] <= currentDate
+            ? handleShowPromotion(promotionWindow)
             : handleShowTimer(promotionWindow)
         }
         className={
@@ -62,7 +64,7 @@ function Main() {
         {promotionWindow['days-date'] === currentDate ? ( //adds an invisible "anchor" div to current day for auto-scroll.
           <div
             className="promotion-window-button-anchor"
-            id={promotionWindow['days-date']}
+            id={`id-${promotionWindow['days-date']}`} //adding non-numerical ID for GSAP plugin to target
           ></div>
         ) : null}
 
@@ -76,13 +78,18 @@ function Main() {
 
   useEffect(() => {
     //handles mobile/vertical view autoscroll
-    if (window.matchMedia('(max-width: 1026px)').matches) {
-      document.getElementById(currentDate).scrollIntoView();
+    if (window.matchMedia('(max-width: 811px)').matches) {
+      gsap.to('#main-container', {
+        duration: window.matchMedia('(max-width: 414px)').matches ? 2 : 1.5, //different scroll speeds for breakpoints
+        scrollTo: `#id-${currentDate}`,
+        ease: 'inOut',
+      });
     }
   });
 
   return (
     <div
+      id="main-container"
       className="main-container"
       style={{
         backgroundImage: `url(${
