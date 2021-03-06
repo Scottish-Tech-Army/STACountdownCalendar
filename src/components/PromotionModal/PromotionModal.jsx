@@ -1,4 +1,5 @@
 import "./PromotionModal.css";
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy } from "@fortawesome/free-solid-svg-icons";
 import Modal from "react-bootstrap/Modal";
@@ -11,7 +12,9 @@ import CarouselComponent from "../CarouselComponent/CarouselComponent.jsx";
 function PromotionModal({
   show,
   handleClose,
-  openWindow
+  openWindow,
+  copyToClipboard,
+  copyToBoard
 }) {
   const carouselContent = [
     { "media-type": "image", "media-url": "/assets/AdrianosFishAndChips.png" },
@@ -45,7 +48,7 @@ function PromotionModal({
               <span className="promotional-modal-coupon-code">
                 <h3>
                   Coupon Code: {openWindow ? openWindow.day["coupon-code"] : ""}
-                  <FontAwesomeIcon icon={faCopy} className="copy-paste" />
+                  <FontAwesomeIcon icon={faCopy} className={copyToBoard ? "copy-pasted" : "copy-paste"} onClick={copyToClipboard} />
                 </h3>
               </span>
               <span className="promotional-modal-description">

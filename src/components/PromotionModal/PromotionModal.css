@@ -90,6 +90,11 @@
   color: #3278a7;
 }
 
+.copy-pasted {
+  margin: 0 0.5rem;
+  color: #03ad0c;
+}
+
 .copy-paste:hover {
   color: #153d68;
 }

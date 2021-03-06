@@ -23,11 +23,13 @@ function Main() {
   const [showPromotionalModal, setShowPromotionalModal] = useState(false);
   const [showCountdownTimer, setShowCountdownTimer] = useState(false);
   const [openWindow, setOpenWindow] = useState(null);
+  const [copyToBoard, setCopyToBoard] = useState(false);
 
   const handleClose = () => {
     setShowPromotionalModal(false);
     setShowCountdownTimer(false);
     setOpenWindow(null);
+    setCopyToBoard(false);
   };
 
   function handleShowPromotion(day) {
@@ -45,6 +47,11 @@ function Main() {
     setOpenWindow(openWindowDate);
     setShowCountdownTimer(true);
   }
+
+  function copyToClipboard() {
+    navigator.clipboard.writeText(openWindow.day["coupon-code"])
+    setCopyToBoard(true);
+  };
 
   const promotionWindows = allDays.map((promotionWindow, index) => {
     return (
@@ -103,6 +110,8 @@ function Main() {
         show={showPromotionalModal}
         handleClose={handleClose}
         openWindow={openWindow}
+        copyToClipboard={copyToClipboard}
+        copyToBoard={copyToBoard}
       />
       <CountdownTimer
         currentDate={currentDate}
