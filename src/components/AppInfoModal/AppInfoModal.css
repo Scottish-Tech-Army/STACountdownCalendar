@@ -1,0 +1,17 @@
+.app-info-modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 90vw;
+  height: 60vh;
+  transform: translate(-200%, -50%);
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: yellow;
+  text-align: center;
+}

@@ -3,6 +3,7 @@ import './Main.css';
 import PromotionWindow from '../../components/PromotionWindow/PromotionWindow';
 import PromotionModal from '../../components/PromotionModal/PromotionModal';
 import CountdownTimer from '../../components/CountdownTimer/CountdownTimer';
+import AppInfoModal from '../../components/AppInfoModal/AppInfoModal';
 import config from '../../config.json';
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
@@ -49,9 +50,9 @@ function Main() {
   }
 
   function copyToClipboard() {
-    navigator.clipboard.writeText(openWindow.day["coupon-code"])
+    navigator.clipboard.writeText(openWindow.day['coupon-code']);
     setCopyToBoard(true);
-  };
+  }
 
   const promotionWindows = allDays.map((promotionWindow, index) => {
     return (
@@ -86,11 +87,24 @@ function Main() {
   useEffect(() => {
     //handles mobile/vertical view autoscroll
     if (window.matchMedia('(max-width: 811px)').matches) {
+      const scrollDuration = window.matchMedia('(max-width: 414px)').matches
+        ? 2
+        : 1.5; //defines scroll speed for different screen widths
+
       gsap.to('#main-container', {
-        duration: window.matchMedia('(max-width: 414px)').matches ? 2 : 1.5, //different scroll speeds for breakpoints
+        duration: scrollDuration,
         scrollTo: `#id-${currentDate}`,
         ease: 'inOut',
+        onComplete: revealAppInfoModal,
       });
+
+      function revealAppInfoModal() {
+        gsap.to('.app-info-modal', {
+          x: '-50%',
+          duration: 0.9,
+          ease: 'inOut',
+        });
+      }
     }
   });
 
@@ -106,6 +120,9 @@ function Main() {
       }}
     >
       <div className="promotion-window-container">{promotionWindows}</div>
+
+      <AppInfoModal />
+
       <PromotionModal
         show={showPromotionalModal}
         handleClose={handleClose}
