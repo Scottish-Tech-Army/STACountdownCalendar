@@ -7,8 +7,25 @@
   transform: translate(-200%, -50%);
   background-color: red;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: left 1s ease-in;
+}
+
+.hidden {
+  left: 200%;
+}
+
+button {
+  background-color: blue;
+  color: white;
+  width: 30%;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
 }
 
 h1 {
