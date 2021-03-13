@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import './fonts/Granville-Regular.otf'
+import './fonts/GranvilleRegular.otf'
 
 ReactDOM.render(
   <React.StrictMode>

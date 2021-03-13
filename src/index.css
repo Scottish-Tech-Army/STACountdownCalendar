@@ -1,12 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, "Granville";
+  font-family: "Granville";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #d3d9de;
-}
-
-@font-face {
-  font-family: "Granville";
-  src: local("Granville"), url(./fonts/Granville-Regular.otf) format("truetype");
 }
