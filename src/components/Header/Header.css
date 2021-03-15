@@ -11,6 +11,14 @@
   margin-top: 0;
 }
 
+.header-text {
+  position: fixed;
+  right: 15%;
+  align-items: center;
+  font-size: 24px;
+  color: red;
+}
+
 .logo-sole-dunbar-text-container {
   display: flex;
   flex-direction: column;
