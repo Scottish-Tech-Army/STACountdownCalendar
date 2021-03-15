@@ -1,4 +1,5 @@
-import "./Header.css";
+import './Header.css';
+import config from '../../config.json';
 
 function Header() {
   return (
@@ -9,6 +10,10 @@ function Header() {
         <span className="logo-sole-dunbar-text-secondary">
           SUPPORTING OUR LOCAL ECONOMY
         </span>
+      </div>
+
+      <div className="header-text">
+        {config.Days.length} DAYS, {config.Days.length} AMAZING OFFERS
       </div>
     </div>
   );
